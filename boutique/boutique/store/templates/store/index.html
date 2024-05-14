@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>index</title>
+</head>
+<body>
+<h1>Vos produits</h1>
+<a href="/store/produit/"> ajouter un produit</a>
+<p>
+
+</p>
+<a href="/store/indexcategorie/"> voir les catégories de produits</a>
+<ol>
+    {% for l in liste %}
+        <li>{{l}}<a href="/store/infos/{{l.id}}/"> informations </a> <a href="/store/update/{{l.id}}/"> mettre à jour </a> <a href="/store/delete/{{l.id}}/"> supprimer</a></li>
+    {% endfor %}
+</ol>
+</body>
+</html>

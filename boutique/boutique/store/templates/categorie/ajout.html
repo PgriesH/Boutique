@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>formulaire de saisie</title>
+</head>
+<body>
+<h1>Saisie d'une nouvelle categorie de produit</h1>
+    {% if id != None %}
+        <form method="post" action="/store/updatetraitementcategorie/{{id}}/">
+    {% else %}
+        <form method="post" action="/store/traitementcategorie/">
+    {% endif %}
+    {% csrf_token %}
+    {{form.as_ul}}
+    <input type="submit" value = "envoyez les données"/>
+</form>
+</body>
+</html>
